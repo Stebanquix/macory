@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROMOS | MACORY FOODS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --macory-orange: #e44b13; 
+            --macory-dark: #111;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #f8f8f8;
+        }
+
+        /* Header idéntico al principal para consistencia */
+        header {
+            background-color: var(--macory-orange);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-brand { display: flex; align-items: center; gap: 15px; }
+        .header-brand img { height: 60px; }
+        .brand-text { font-family: 'Archivo Black'; color: white; font-size: 1.4rem; text-transform: uppercase; }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        /* Banner de Promociones */
+        .promo-hero {
+            background: linear-gradient(135deg, #e44b13 0%, #ff7e3d 100%);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .promo-hero h1 {
+            font-family: 'Archivo Black';
+            font-size: clamp(2rem, 8vw, 4rem);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Grid de Promos */
+        .promo-section {
+            padding: 50px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid-promos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card-promo {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .card-promo:hover { transform: scale(1.02); }
+
+        .tag-descuento {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ffbc0d;
+            color: #111;
+            padding: 5px 15px;
+            font-weight: 900;
+            border-radius: 50px;
+            font-size: 1.1rem;
+        }
+
+        .card-promo img { width: 100%; height: 250px; object-fit: cover; }
+
+        .card-content { padding: 25px; text-align: center; }
+
+        .card-content h3 {
+            font-family: 'Archivo Black';
+            color: var(--macory-orange);
+            margin: 0 0 10px;
+            text-transform: uppercase;
+        }
+
+        .precio-viejo { text-decoration: line-through; color: #999; font-size: 1.1rem; }
+        .precio-nuevo { color: var(--macory-dark); font-size: 1.8rem; font-weight: 900; display: block; margin: 5px 0 15px; }
+
+        .btn-promo {
+            background: var(--macory-orange);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        footer { background: #111; color: white; text-align: center; padding: 40px; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-brand">
+            <img src="BOTON_APP_MACORY.png" alt="Macory Logo">
+            <span class="brand-text">MACORY FOODS</span>
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="promos.html" style="border-bottom: 2px solid white;">Promos</a>
+            <a href="locales.html">Locales</a>
+        </nav>
+    </header>
+
+    <section class="promo-hero">
+        <h1>OFERTAS MACORY</h1>
+        <p>Aprovecha antes de que se agoten</p>
+    </section>
+
+    <main class="promo-section">
+        <div class="grid-promos">
+            
+            <div class="card-promo">
+                <div class="tag-descuento">2x1</div>
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1000" alt="Promo Hamburguesa">
+                <div class="card-content">
+                    <h3>Martes de Burger</h3>
+                    <p>Compra una Macory Clásica y lleva la segunda GRATIS.</p>
+                    <span class="precio-viejo">$37.800</span>
+                    <span class="precio-nuevo">$18.900</span>
+                    <button class="btn-promo">Pedir Promo</button>
+                </div>
+            </div>
+
+            <div class="card-promo">
+                <div class="tag-descuento">-30%</div>
+                <img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=1000" alt="Promo Pollo">
+                <div class="card-content">
+                    <h3>Mega Cubeta Macory</h3>
+                    <p>12 piezas de pollo ultra crujiente + Coca-Cola de 1.5L.</p>
+                    <span class="precio-viejo">$65.000</span>
+                    <span class="precio-nuevo">$45.500</span>
+                    <button class="btn-promo">Pedir Promo</button>
+                </div>
+            </div>
+
+            <div class="card-promo">
+                <div class="tag-descuento">NUEVO</div>
+                <img src="https://images.unsplash.com/photo-1594179047519-f347310d3322?q=80&w=1000" alt="Combo Pareja">
+                <div class="card-content">
+                    <h3>Combo Amor Macory</h3>
+                    <p>2 Burgers + 2 Papas + 2 Coca-Colas heladas.</p>
+                    <span class="precio-viejo">$55.000</span>
+                    <span class="precio-nuevo">$39.900</span>
+                    <button class="btn-promo">Pedir Promo</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MACORY FOODS - Promociones válidas para Colombia.</p>
+    </footer>
+
+</body>
+</html>
